@@ -2,7 +2,7 @@ import './css/styles.css';
 import {fetchCountries} from './fetchCountries';
 import {Notify} from 'notiflix/build/notiflix-notify-aio';
 import debounce from 'lodash.debounce';
-import { makeMarkupList, makeMarkupItem } from './markup';
+import { makeMarkupList, makeMarkupItem } from './markupCreation';
 
 const countryList = document.querySelector('.country-list');
 const countryInfo = document.querySelector('.country-info');
