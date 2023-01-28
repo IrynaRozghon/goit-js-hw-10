@@ -4,11 +4,11 @@ import {Notify} from 'notiflix/build/notiflix-notify-aio';
 import debounce from 'lodash.debounce';
 import { makeMarkupList, makeMarkupItem } from './markup';
 
-const DEBOUNCE_DELAY = 300;
-
 const countryList = document.querySelector('.country-list');
 const countryInfo = document.querySelector('.country-info');
 const searchInput = document.getElementById('search-box');
+
+const DEBOUNCE_DELAY = 300;
 
 searchInput.addEventListener('input', debounce(findCountry, DEBOUNCE_DELAY));
 
@@ -47,6 +47,8 @@ function cleanSpace(){
    countryInfo.innerHTML = ''
 countryList.innerHTML = ''
 }
+
+
 function onError(){
     cleanSpace()
     Notify.failure('Oops, there is no country with that name')
