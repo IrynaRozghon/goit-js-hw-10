@@ -22,7 +22,7 @@ function findCountry(e){
     fetchCountries(inputValue).then(value =>{
         console.log(value)
          
-        if(!value.length) throw new Error(error)
+        if(!value.length) throw new Error('Oops, there is no country with that name')
         filterCountry(value)
     }).catch(onError)
 }
